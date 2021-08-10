@@ -1,101 +1,82 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Coding Basics</title>
     <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: sans-serif;
-        margin-left: 30px;
-        margin-right: 30px;
-      }
-
-      #header {
-        text-align: center;
-      }
-
-      #container {
-        background-color: pink;
-        margin: 40px auto;
-        max-width: 800px;
-        padding: 38px 31px;
-      }
-
-      input {
-        font-size: 21px;
-        line-height: 33px;
-        margin: 0 0 23px 0;
-        padding: 0 9px;
-        width: 100%;
-      }
-
-      button {
-        font-size: 21px;
-        line-height: 33px;
-        margin: 0 0 23px 0;
-        padding: 0 6px;
-      }
-
-      #output-div {
-        background-color: lightgrey;
-        margin: 20px auto;
-        padding: 20px;
-        width: 100%;
-      }
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: sans-serif;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        
+        #header {
+            text-align: center;
+        }
+        
+        #container {
+            background-color: pink;
+            margin: 40px auto;
+            max-width: 800px;
+            padding: 38px 31px;
+        }
+        
+        input {
+            font-size: 21px;
+            line-height: 33px;
+            margin: 0 0 23px 0;
+            padding: 0 9px;
+            width: 100%;
+        }
+        
+        button {
+            font-size: 21px;
+            line-height: 33px;
+            margin: 0 0 23px 0;
+            padding: 0 6px;
+        }
+        
+        #output-div {
+            background-color: lightgrey;
+            margin: 20px auto;
+            padding: 20px;
+            width: 100%;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <h1 id="header">Basics: Beat That! 🚀</h1>
     <div id="container">
-      <p>Input:</p>
-      <input id="input-field" />
-      <br />
-      <button id="submit-button">Submit</button>
-      <p>Output:</p>
-      <div id="output-div">
-        You are playing a multi-player game called Beat That. <br />
+        <p>Input:</p>
+        <input id="input-field" />
         <br />
-        GAME RULES: <br />
-        1. Start by entering the number of players who wish to play. <br />
-        2. Players take turns to roll any number of dice entered at the start of
-        each round. <br />
-        3. The biggest possible number will automatically be generated from
-        those digits. <br />
-        4. The player with the biggest sum of all the numbers obtained thus far
-        is the winner for that round! <br />
-        <br />
-        HOW TO START:
-        <br />
-        Simply enter the number of players, then click the submit button.
-        <br />
-        <br />
-        TIP: <br />
-        At any point of time, you can enter "reversed" to play the reversed mode where the smallest total sum wins. To change back to the normal mode thereafter, simply
-        enter "normal". <br />
-      </div>
-      </div>
+        <button id="submit-button">Submit</button>
+        <p>Output:</p>
+        <div id="output-div"></div>
     </div>
     <!-- Import program logic -->
     <script src="script.js"></script>
     <!-- Define button click functionality -->
     <script>
-      var button = document.querySelector("#submit-button");
-      button.addEventListener("click", function () {
-        // Set result to input value
-        var input = document.querySelector("#input-field");
-        var result = main(input.value);
+        var button = document.querySelector("#submit-button");
+        button.addEventListener("click", function() {
+            // Set result to input value
+            var input = document.querySelector("#input-field");
+            var result = main(input.value);
 
-        // Display result in output element
-        var output = document.querySelector("#output-div");
-        output.innerHTML = result;
+            // Display result in output element
+            var output = document.querySelector("#output-div");
+            output.innerHTML = result;
 
-        // Reset input value
-        input.value = "";
-      });
+            // Reset input value
+            input.value = "";
+        });
     </script>
-  </body>
+</body>
+
 </html>
